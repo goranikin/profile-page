@@ -1,7 +1,7 @@
 import './App.css';
 import './reset.css';
 
-import {useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 
 function App() {
   return (
@@ -33,115 +33,123 @@ const Intro = () => {
 };
 
 const MBTI = () => {
-    const [showInfo, setShowInfo] = useState(false);
-    const [animatedText, setAnimatedText] = useState('');
-    const fullText = "  ENTP";
+  const [showInfo, setShowInfo] = useState(false);
+  const [animatedText, setAnimatedText] = useState('');
+  const fullText = '  ENTP';
 
-    useEffect(() => {
-        if (showInfo) {
-            setAnimatedText('');
-            let i = 0;
-            const typingEffect = setInterval(() => {
-                if (i < fullText.length) {
-                    setAnimatedText((prev) => prev + fullText.charAt(i));
-                    i++;
-                } else {
-                    clearInterval(typingEffect);
-                }
-            }, 200);
-
-            return () => { clearInterval(typingEffect); };
+  useEffect(() => {
+    if (showInfo) {
+      setAnimatedText('');
+      let i = 0;
+      const typingEffect = setInterval(() => {
+        if (i < fullText.length) {
+          setAnimatedText((prev) => prev + fullText.charAt(i));
+          i++;
+        } else {
+          clearInterval(typingEffect);
         }
-    }, [showInfo]);
+      }, 200);
 
-    const handleArrowClick = () => {
-        setShowInfo(!showInfo);
-    };
-    return (
-        <div>
-            <h1>MBTI
-                <button className="arrow-button" onClick={handleArrowClick}>
-                    &#8594;
-                </button>
-                {showInfo && <span className="animated-text">{animatedText}</span>}
-            </h1>
+      return () => {
+        clearInterval(typingEffect);
+      };
+    }
+  }, [showInfo]);
 
-        </div>
-    );
+  const handleArrowClick = () => {
+    setShowInfo(!showInfo);
+  };
+  return (
+    <div>
+      <h1>
+        MBTI
+        <button className="arrow-button" onClick={handleArrowClick}>
+          &#8594;
+        </button>
+        {showInfo && <span className="animated-text">{animatedText}</span>}
+      </h1>
+    </div>
+  );
 };
 
 const Sports = () => {
-    const [showInfo, setShowInfo] = useState(false);
-    const [animatedText, setAnimatedText] = useState('');
-    const fullText = "  Climbing, Swimming, Running";
+  const [showInfo, setShowInfo] = useState(false);
+  const [animatedText, setAnimatedText] = useState('');
+  const fullText = '  Climbing, Swimming, Running';
 
-    useEffect(() => {
-        if (showInfo) {
-            setAnimatedText('');
-            let i = 0;
-            const typingEffect = setInterval(() => {
-                if (i < fullText.length) {
-                    setAnimatedText((prev) => prev + fullText.charAt(i));
-                    i++;
-                } else {
-                    clearInterval(typingEffect);
-                }
-            }, 150);
-
-            return () => { clearInterval(typingEffect); };
+  useEffect(() => {
+    if (showInfo) {
+      setAnimatedText('');
+      let i = 0;
+      const typingEffect = setInterval(() => {
+        if (i < fullText.length) {
+          setAnimatedText((prev) => prev + fullText.charAt(i));
+          i++;
+        } else {
+          clearInterval(typingEffect);
         }
-    }, [showInfo]);
+      }, 150);
 
-    const handleArrowClick = () => {
-        setShowInfo(!showInfo);
-    };
-    return (
-        <div>
-            <h1>Sports
-                <button className="arrow-button" onClick={handleArrowClick}>
-                    &#8594;
-                </button>
-                {showInfo && <span className="animated-text">{animatedText}</span>}
-            </h1>
-        </div>
-    );
+      return () => {
+        clearInterval(typingEffect);
+      };
+    }
+  }, [showInfo]);
+
+  const handleArrowClick = () => {
+    setShowInfo(!showInfo);
+  };
+  return (
+    <div>
+      <h1>
+        Sports
+        <button className="arrow-button" onClick={handleArrowClick}>
+          &#8594;
+        </button>
+        {showInfo && <span className="animated-text">{animatedText}</span>}
+      </h1>
+    </div>
+  );
 };
 
 const Hobby = () => {
-    const [showInfo, setShowInfo] = useState(false);
-    const [animatedText, setAnimatedText] = useState('');
-    const fullText = "  Coffee, Camera, Writing";
+  const [showInfo, setShowInfo] = useState(false);
+  const [animatedText, setAnimatedText] = useState('');
+  const fullText = '  Coffee, Camera, Writing';
 
-    useEffect(() => {
-        if (showInfo) {
-            setAnimatedText('');
-            let i = 0;
-            const typingEffect = setInterval(() => {
-                if (i < fullText.length) {
-                    setAnimatedText((prev) => prev + fullText.charAt(i));
-                    i++;
-                } else {
-                    clearInterval(typingEffect);
-                }
-            }, 150);
-
-            return () => { clearInterval(typingEffect); };
+  useEffect(() => {
+    if (showInfo) {
+      setAnimatedText('');
+      let i = 0;
+      const typingEffect = setInterval(() => {
+        if (i < fullText.length) {
+          setAnimatedText((prev) => prev + fullText.charAt(i));
+          i++;
+        } else {
+          clearInterval(typingEffect);
         }
-    }, [showInfo]);
+      }, 150);
 
-    const handleArrowClick = () => {
-        setShowInfo(!showInfo);
-    };
-    return (
-        <div>
-            <h1>Hobby
-                <button className="arrow-button" onClick={handleArrowClick}>
-                    &#8594;
-                </button>
-                {showInfo && <span className="animated-text">{animatedText}</span>}
-            </h1>
-        </div>
-    );
+      return () => {
+        clearInterval(typingEffect);
+      };
+    }
+  }, [showInfo]);
+
+  const handleArrowClick = () => {
+    setShowInfo(!showInfo);
+  };
+  return (
+    <div>
+      <h1>
+        Hobby
+        <button className="arrow-button" onClick={handleArrowClick}>
+          &#8594;
+        </button>
+        {showInfo && <span className="animated-text">{animatedText}</span>}
+      </h1>
+    </div>
+  );
 };
 
 export default App;
