@@ -23,11 +23,11 @@ function App() {
 const Intro = () => {
   return (
     <div className="intro">
-      <h4 style={{ fontSize: '25px', marginBottom: '15px' }}>Name: 최장혁</h4>
-      <h4 style={{ fontSize: '25px', marginBottom: '15px' }}>
+      <h4 style={{ fontSize: '30px', marginBottom: '15px' }}>Name: 최장혁</h4>
+      <h4 style={{ fontSize: '30px', marginBottom: '15px' }}>
         Major: 산업공학과
       </h4>
-      <h4 style={{ fontSize: '25px', marginBottom: '15px' }}>Age: 25세</h4>
+      <h4 style={{ fontSize: '30px', marginBottom: '15px' }}>Age: 25세</h4>
     </div>
   );
 };
