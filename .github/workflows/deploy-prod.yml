@@ -1,7 +1,6 @@
 name: deploy-prod
 
 on:
-  push:
   workflow_dispatch:
 
 jobs:
